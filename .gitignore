@@ -1,5 +1,5 @@
 build/
 .git/
 .cache/
-
-/cmake_build_debug/
+.idea/
+cmake-build-debug/
