@@ -42,7 +42,7 @@ int vec_bench() {
     std::cout << "Benchmarking push_back():\n";
     std::cout << "------------------------\n";
 
-    for (long long iteration : iters) {
+    for (long long iteration: iters) {
         std::cout << "Iterations: " << iteration << std::endl;
 
         // Benchmarking int
