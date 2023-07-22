@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # Add the main executable target
-add_executable(main main.cxx src/vector/vector.hpp src/vector/vec_test.hpp src/vector/vec_benchmark.hpp src/vector/vec_bench_async.hpp)
+add_executable(main main.cxx src/vector/vector.hpp src/vector/vec_test.hpp src/vector/vec_benchmark.hpp src/vector/vec_bench_async.hpp src/vector/bench_v2.hpp src/vector/sp_vector.hpp)
 
 # You can add more executables or tests as needed
 # add_executable(another_executable source_files.cpp)

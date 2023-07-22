@@ -1,4 +1,4 @@
-#include "vector.hpp"
+#include "sp_vector.hpp"
 #include <cassert>
 #include <iostream>
 
@@ -86,9 +86,9 @@ inline int vec_test() {
 
   // Test 9: Swap
   dsx::structs::vector<int, 5> v8 = {1, 2, 3};
-  dsx::structs::vector<int, 5> v9 = {4, 5, 6};
+  dsx::structs::vector<int, 5> v9 = {4, 5, 6, 3};
   v8.swap(v9);
-  ASSERT(v8.len() == 3 && v8[0] == 4 && v8[1] == 5 && v8[2] == 6);
+  ASSERT(v8.len() == 4 && v8[0] == 4 && v8[1] == 5 && v8[2] == 6);
   ASSERT(v9.len() == 3 && v9[0] == 1 && v9[1] == 2 && v9[2] == 3);
   std::cout << "Test 9 (Swap) passed!" << std::endl;
 

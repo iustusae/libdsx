@@ -2,7 +2,7 @@
 #include <vector>
 #include <chrono>
 #include <cmath>
-#include "vector.hpp" // Include your custom vector header
+#include "sp_vector.hpp" // Include your custom vector header
 
 template<typename T>
 double benchmarkCustomVectorPushBack(long long iterations) {
@@ -35,7 +35,7 @@ double benchmarkStdVectorPushBack(long long iterations) {
 
 int vec_bench() {
     std::vector<long long> iters;
-    for (int i = 0; i <= 10; i++) {
+    for (int i = 0; i <= 6; i++) {
         iters.push_back(pow(10, i));
     }
 
