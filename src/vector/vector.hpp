@@ -108,6 +108,7 @@ public:
  * @return True if the vector is empty, false otherwise.
  */
     [[nodiscard]] bool is_empty() const { return len() == 0; }
+
   void reserve(size_t n_size);
   void shrink();
 
