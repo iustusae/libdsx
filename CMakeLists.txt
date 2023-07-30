@@ -9,8 +9,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # Add the main executable target
-add_executable(main main.cxx src/vector/vector.hpp src/vector/vec_test.hpp src/vector/vec_benchmark.hpp)
+add_executable(main main.cxx src/vector/vector.hpp src/vector/vec_test.hpp src/vector/vec_benchmark.hpp src/linked_list/linked_list.h src/vector/v_exceptions.hpp)
+target_compile_options(main PRIVATE -std=c++20 -Wall -Werror)
+enable_testing()
 
+    find_package(GTest CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
 # You can add more executables or tests as needed
 # add_executable(another_executable source_files.cpp)
 # add_executable(test_my_library test_files.cpp)

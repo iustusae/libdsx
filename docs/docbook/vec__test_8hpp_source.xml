@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vec__test_8hpp_source" xml:lang="en-US">
+<title>vec_test.hpp</title>
+<indexterm><primary>src/vector/vec_test.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_vector_8hpp">vector.hpp</link>&quot;</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;cassert&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+4 
+5 <emphasis role="comment">//&#32;Helper&#32;macro&#32;for&#32;test&#32;assertions</emphasis>
+6 <emphasis role="preprocessor">#define&#32;ASSERT(condition)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+7 <emphasis role="preprocessor">&#32;&#32;do&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+8 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;if&#32;(!(condition))&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+9 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;&quot;Assertion&#32;failed&#32;at&#32;line&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;__LINE__&#32;&lt;&lt;&#32;&quot;&#32;in&#32;function&#32;&quot;&#32;&#32;\
+10 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;__FUNCTION__&#32;&lt;&lt;&#32;&quot;:&#32;&quot;&#32;&lt;&lt;&#32;#condition&#32;&lt;&lt;&#32;std::endl;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+11 &#32;&#32;&#32;&#32;&#32;&#32;exit(-1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+12 &#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+13 &#32;&#32;}&#32;while&#32;(0)
+14 
+15 <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;vec_test()&#32;{
+16 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;1:&#32;Default&#32;constructor</emphasis>
+17 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v1;
+18 &#32;&#32;ASSERT(v1.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;0);
+19 &#32;&#32;ASSERT(v1.<link linkend="_classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83">capacity</link>()&#32;==&#32;5);
+20 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;1&#32;(Default&#32;Constructor)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+21 
+22 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;2:&#32;Initializer_list&#32;constructor</emphasis>
+23 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v2&#32;=&#32;{1,&#32;2,&#32;3};
+24 &#32;&#32;ASSERT(v2.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;3);
+25 &#32;&#32;ASSERT(v2.<link linkend="_classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83">capacity</link>()&#32;==&#32;5);
+26 &#32;&#32;ASSERT(v2[0]&#32;==&#32;1);
+27 &#32;&#32;ASSERT(v2[1]&#32;==&#32;2);
+28 &#32;&#32;ASSERT(v2[2]&#32;==&#32;3);
+29 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;2&#32;(Initializer_list&#32;Constructor)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+30 
+31 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;3:&#32;Size&#32;constructor</emphasis>
+32 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v3(4);
+33 &#32;&#32;ASSERT(v3.len()&#32;==&#32;0);
+34 &#32;&#32;ASSERT(v3.capacity()&#32;==&#32;4);
+35 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;3&#32;(Size&#32;Constructor)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+36 
+37 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;4:&#32;Push&#32;and&#32;Pop</emphasis>
+38 &#32;&#32;v1.<link linkend="_classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a">push</link>(10);
+39 &#32;&#32;v1.<link linkend="_classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a">push</link>(20);
+40 &#32;&#32;v1.<link linkend="_classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a">push</link>(30);
+41 &#32;&#32;ASSERT(v1.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;3);
+42 &#32;&#32;ASSERT(v1[0]&#32;==&#32;10);
+43 &#32;&#32;ASSERT(v1[1]&#32;==&#32;20);
+44 &#32;&#32;ASSERT(v1[2]&#32;==&#32;30);
+45 &#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;popped&#32;=&#32;v1.<link linkend="_classdsx_1_1structs_1_1vector_1a2a8f7c5710eaac9b06a7366e426bc126">pop</link>();
+46 &#32;&#32;ASSERT(popped.has_value());
+47 &#32;&#32;ASSERT(popped.value()&#32;==&#32;30);
+48 &#32;&#32;ASSERT(v1.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;2);
+49 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;4&#32;(Push&#32;and&#32;Pop)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+50 
+51 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;5:&#32;Insert_at</emphasis>
+52 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v4&#32;=&#32;{1,&#32;2,&#32;3};
+53 &#32;&#32;v4.<link linkend="_classdsx_1_1structs_1_1vector_1ae003c0c56d315d6e0446192a5e268183">insert_at</link>(0,&#32;0);
+54 &#32;&#32;v4.<link linkend="_classdsx_1_1structs_1_1vector_1ae003c0c56d315d6e0446192a5e268183">insert_at</link>(4,&#32;4);
+55 &#32;&#32;ASSERT(v4.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;5);
+56 &#32;&#32;ASSERT(v4[0]&#32;==&#32;0);
+57 &#32;&#32;ASSERT(v4[1]&#32;==&#32;1);
+58 &#32;&#32;ASSERT(v4[2]&#32;==&#32;2);
+59 &#32;&#32;ASSERT(v4[3]&#32;==&#32;3);
+60 &#32;&#32;ASSERT(v4[4]&#32;==&#32;4);
+61 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;5&#32;(Insert_at)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+62 
+63 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;6:&#32;Erase_at</emphasis>
+64 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v5&#32;=&#32;{1,&#32;2,&#32;3};
+65 &#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;erased&#32;=&#32;v5.<link linkend="_classdsx_1_1structs_1_1vector_1abb50d683767ef3c4d88b34b5ad48b3c9">erase_at</link>(1);
+66 &#32;&#32;ASSERT(erased.has_value()&#32;&amp;&amp;&#32;erased.value()&#32;==&#32;2);
+67 &#32;&#32;ASSERT(v5.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;2);
+68 &#32;&#32;ASSERT(v5[0]&#32;==&#32;1);
+69 &#32;&#32;ASSERT(v5[1]&#32;==&#32;3);
+70 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;6&#32;(Erase_at)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+71 
+72 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;7:&#32;Clear</emphasis>
+73 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v6&#32;=&#32;{1,&#32;2,&#32;3};
+74 &#32;&#32;v6.<link linkend="_classdsx_1_1structs_1_1vector_1afc1eb03bf3d9c8389b36456c12cadb66">clear</link>();
+75 &#32;&#32;ASSERT(v6.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;0);
+76 &#32;&#32;ASSERT(v6.<link linkend="_classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83">capacity</link>()&#32;==&#32;5);
+77 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;7&#32;(Clear)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+78 
+79 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;8:&#32;Resize</emphasis>
+80 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v7&#32;=&#32;{1,&#32;2,&#32;3};
+81 &#32;&#32;v7.<link linkend="_classdsx_1_1structs_1_1vector_1ab7612d091ae431bc5e95b707f2db395f">resize</link>(2);
+82 &#32;&#32;ASSERT(v7.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;2);
+83 &#32;&#32;ASSERT(v7[0]&#32;==&#32;1);
+84 &#32;&#32;ASSERT(v7[1]&#32;==&#32;2);
+85 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;8&#32;(Resize)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+86 
+87 &#32;&#32;<emphasis role="comment">//&#32;Test&#32;9:&#32;Swap</emphasis>
+88 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v8&#32;=&#32;{1,&#32;2,&#32;3};
+89 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;int&gt;</link>&#32;v9&#32;=&#32;{4,&#32;5,&#32;6,&#32;3};
+90 &#32;&#32;v8.<link linkend="_classdsx_1_1structs_1_1vector_1affadecdd1b5acb01d8cbbb0b16b8c647">swap</link>(v9);
+91 &#32;&#32;ASSERT(v8.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;4&#32;&amp;&amp;&#32;v8[0]&#32;==&#32;4&#32;&amp;&amp;&#32;v8[1]&#32;==&#32;5&#32;&amp;&amp;&#32;v8[2]&#32;==&#32;6);
+92 &#32;&#32;ASSERT(v9.<link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link>()&#32;==&#32;3&#32;&amp;&amp;&#32;v9[0]&#32;==&#32;1&#32;&amp;&amp;&#32;v9[1]&#32;==&#32;2&#32;&amp;&amp;&#32;v9[2]&#32;==&#32;3);
+93 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;9&#32;(Swap)&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+94 
+95 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;All&#32;tests&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+96 
+97 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+98 }
+</programlisting></section>

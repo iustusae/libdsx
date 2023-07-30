@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>libdsx</title>
+    </info>
+<chapter>
+    <title>dsx::vector |  Features</title>
+    <xi:include href="md_build_tests_docs_vector.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Benchmarking push_back():</title>
+    <xi:include href="md_src_vector_benchmark.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>dsx::vector |  Features</title>
+    <xi:include href="md_src_vector_vector.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="classdsx_1_1structs_1_1exceptions_1_1_negative_index_execption.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_node.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdsx_1_1structs_1_1vector.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_vector_test.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="linked__list_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="v__exceptions_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="vec__benchmark_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="vec__test_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="vector_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="vector_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

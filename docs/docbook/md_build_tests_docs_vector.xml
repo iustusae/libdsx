@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md_build_tests_docs_vector" xml:lang="en-US">
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md1">
+<title>Constructor(s): A constructor is used to initialize the vector object. It may have various forms, such as a default constructor, a constructor with initial size, or a constructor that initializes the vector with given values</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md2">
+<title>Destructor: A destructor is responsible for releasing any allocated memory and cleaning up resources when the vector object goes out of scope</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md3">
+<title>Capacity Methods</title>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md4">
+<title>&lt;tt&gt;size()&lt;/tt&gt;: Returns the current number of elements in the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md5">
+<title>&lt;tt&gt;capacity()&lt;/tt&gt;: Returns the current size of the allocated storage (how many elements the vector can hold without reallocating)</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md6">
+<title>&lt;tt&gt;empty()&lt;/tt&gt;: Checks whether the vector is empty or not</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md7">
+<title>&lt;tt&gt;reserve()&lt;/tt&gt;: Requests a change in capacity without changing the vector&apos;s size</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md8">
+<title>&lt;tt&gt;shrink_to_fit()&lt;/tt&gt;: Requests the container to reduce its capacity to fit its size</title>
+</section>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md9">
+<title>Element Access Methods</title>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md10">
+<title>&lt;tt&gt;operator[]&lt;/tt&gt;: Accesses elements in the vector using the subscript operator</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md11">
+<title>&lt;tt&gt;at()&lt;/tt&gt;: Accesses elements in the vector with bounds checking, throwing an exception if the index is out of range</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md12">
+<title>&lt;tt&gt;front()&lt;/tt&gt;: Returns a reference to the first element in the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md13">
+<title>&lt;tt&gt;back()&lt;/tt&gt;: Returns a reference to the last element in the vector</title>
+</section>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md14">
+<title>Modifiers</title>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md15">
+<title>&lt;tt&gt;push_back()&lt;/tt&gt;: Adds an element to the end of the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md16">
+<title>&lt;tt&gt;pop_back()&lt;/tt&gt;: Removes the last element from the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md17">
+<title>&lt;tt&gt;insert()&lt;/tt&gt;: Inserts elements at a specific position</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md18">
+<title>&lt;tt&gt;erase()&lt;/tt&gt;: Removes elements at a specific posaition or within a range</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md19">
+<title>&lt;tt&gt;clear()&lt;/tt&gt;: Removes all elements from the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md20">
+<title>&lt;tt&gt;resize()&lt;/tt&gt;: Changes the size of the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md21">
+<title>&lt;tt&gt;swap()&lt;/tt&gt;: Swaps the contents of two vectors</title>
+</section>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md22">
+<title>Other Useful Methods</title>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md23">
+<title>&lt;tt&gt;begin(), end()&lt;/tt&gt;: Return iterators to the beginning and end of the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md24">
+<title>&lt;tt&gt;rbegin(), rend()&lt;/tt&gt;: Return reverse iterators to the beginning and end of the vector</title>
+</section>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md25">
+<title>&lt;tt&gt;emplace()&lt;/tt&gt;: Constructs an element in-place at the given position</title>
+<section xml:id="_md_build_tests_docs_vector_1autotoc_md26">
+<title>These are some common methods you would typically find in a basic vector implementation. More complex vector implementations might include additional methods and features for specialized use cases</title>
+</section>
+</section>
+</section>
+</section>

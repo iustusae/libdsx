@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_negative_index_execption" kind="class" language="C++" prot="public">
+    <compoundname>NegativeIndexExecption</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_negative_index_execption_1ad7c70f5bb130837d35a9ef7d477ea258" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string NegativeIndexExecption::what</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>what</name>
+        <qualifiedname>NegativeIndexExecption::what</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/vector/v_exceptions.hpp" line="12" column="15" bodyfile="src/vector/v_exceptions.hpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>NegativeIndexExecption</label>
+        <link refid="class_negative_index_execption"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>NegativeIndexExecption</label>
+        <link refid="class_negative_index_execption"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/vector/v_exceptions.hpp" line="10" column="1" bodyfile="src/vector/v_exceptions.hpp" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_negative_index_execption_1ad7c70f5bb130837d35a9ef7d477ea258" prot="public" virt="non-virtual"><scope>NegativeIndexExecption</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="vec__test_8hpp" kind="file" language="C++">
+    <compoundname>vec_test.hpp</compoundname>
+    <includes refid="vector_8hpp" local="yes">vector.hpp</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>v_exceptions.hpp</label>
+        <link refid="v__exceptions_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/vector/vec_test.hpp</label>
+        <link refid="vec__test_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector.hpp</label>
+        <link refid="vector_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>cassert</label>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>exception</label>
+      </node>
+      <node id="9">
+        <label>initializer_list</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+      <node id="12">
+        <label>optional</label>
+      </node>
+      <node id="13">
+        <label>sstream</label>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="vec__test_8hpp_1ac22830a985e1daed0c9eadba8c6f606e" prot="public" static="no">
+        <name>ASSERT</name>
+        <param><defname>condition</defname></param>
+        <initializer>  do {                                                                         \
+    if (!(condition)) {                                                        \
+      std::cerr &lt;&lt; &quot;Assertion failed at line &quot; &lt;&lt; __LINE__ &lt;&lt; &quot; in function &quot;  \
+                &lt;&lt; __FUNCTION__ &lt;&lt; &quot;: &quot; &lt;&lt; #condition &lt;&lt; std::endl;            \
+      exit(-1);                                                                \
+    }                                                                          \
+  } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/vector/vec_test.hpp" line="6" column="9" bodyfile="src/vector/vec_test.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vec__test_8hpp_1ab308af68feee0940daad2fe8303f1adc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int vec_test</definition>
+        <argsstring>()</argsstring>
+        <name>vec_test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/vector/vec_test.hpp" line="15" column="12" bodyfile="src/vector/vec_test.hpp" bodystart="15" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">vector.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>macro<sp/>for<sp/>test<sp/>assertions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT(condition)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(condition))<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/>&quot;Assertion<sp/>failed<sp/>at<sp/>line<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>__LINE__<sp/>&lt;&lt;<sp/>&quot;<sp/>in<sp/>function<sp/>&quot;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>__FUNCTION__<sp/>&lt;&lt;<sp/>&quot;:<sp/>&quot;<sp/>&lt;&lt;<sp/>#condition<sp/>&lt;&lt;<sp/>std::endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exit(-1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vec_test()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>1:<sp/>Default<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v1;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>ASSERT(v1.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>ASSERT(v1.<ref refid="classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83" kindref="member">capacity</ref>()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>1<sp/>(Default<sp/>Constructor)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>2:<sp/>Initializer_list<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v2<sp/>=<sp/>{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>ASSERT(v2.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>ASSERT(v2.<ref refid="classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83" kindref="member">capacity</ref>()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>ASSERT(v2[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>ASSERT(v2[1]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>ASSERT(v2[2]<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>2<sp/>(Initializer_list<sp/>Constructor)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>3:<sp/>Size<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v3(4);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>ASSERT(v3.len()<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>ASSERT(v3.capacity()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>3<sp/>(Size<sp/>Constructor)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>4:<sp/>Push<sp/>and<sp/>Pop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>v1.<ref refid="classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a" kindref="member">push</ref>(10);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>v1.<ref refid="classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a" kindref="member">push</ref>(20);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>v1.<ref refid="classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a" kindref="member">push</ref>(30);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>ASSERT(v1.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>ASSERT(v1[0]<sp/>==<sp/>10);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>ASSERT(v1[1]<sp/>==<sp/>20);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>ASSERT(v1[2]<sp/>==<sp/>30);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>popped<sp/>=<sp/>v1.<ref refid="classdsx_1_1structs_1_1vector_1a2a8f7c5710eaac9b06a7366e426bc126" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>ASSERT(popped.has_value());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>ASSERT(popped.value()<sp/>==<sp/>30);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>ASSERT(v1.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>4<sp/>(Push<sp/>and<sp/>Pop)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>5:<sp/>Insert_at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v4<sp/>=<sp/>{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>v4.<ref refid="classdsx_1_1structs_1_1vector_1ae003c0c56d315d6e0446192a5e268183" kindref="member">insert_at</ref>(0,<sp/>0);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>v4.<ref refid="classdsx_1_1structs_1_1vector_1ae003c0c56d315d6e0446192a5e268183" kindref="member">insert_at</ref>(4,<sp/>4);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>ASSERT(v4.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>ASSERT(v4[0]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>ASSERT(v4[1]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>ASSERT(v4[2]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>ASSERT(v4[3]<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>ASSERT(v4[4]<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>5<sp/>(Insert_at)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>6:<sp/>Erase_at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v5<sp/>=<sp/>{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>erased<sp/>=<sp/>v5.<ref refid="classdsx_1_1structs_1_1vector_1abb50d683767ef3c4d88b34b5ad48b3c9" kindref="member">erase_at</ref>(1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>ASSERT(erased.has_value()<sp/>&amp;&amp;<sp/>erased.value()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>ASSERT(v5.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>ASSERT(v5[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>ASSERT(v5[1]<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>6<sp/>(Erase_at)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>7:<sp/>Clear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v6<sp/>=<sp/>{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>v6.<ref refid="classdsx_1_1structs_1_1vector_1afc1eb03bf3d9c8389b36456c12cadb66" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>ASSERT(v6.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>ASSERT(v6.<ref refid="classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83" kindref="member">capacity</ref>()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>7<sp/>(Clear)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>8:<sp/>Resize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v7<sp/>=<sp/>{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>v7.<ref refid="classdsx_1_1structs_1_1vector_1ab7612d091ae431bc5e95b707f2db395f" kindref="member">resize</ref>(2);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>ASSERT(v7.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>ASSERT(v7[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>ASSERT(v7[1]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>8<sp/>(Resize)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>9:<sp/>Swap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v8<sp/>=<sp/>{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>v9<sp/>=<sp/>{4,<sp/>5,<sp/>6,<sp/>3};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>v8.<ref refid="classdsx_1_1structs_1_1vector_1affadecdd1b5acb01d8cbbb0b16b8c647" kindref="member">swap</ref>(v9);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>ASSERT(v8.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>4<sp/>&amp;&amp;<sp/>v8[0]<sp/>==<sp/>4<sp/>&amp;&amp;<sp/>v8[1]<sp/>==<sp/>5<sp/>&amp;&amp;<sp/>v8[2]<sp/>==<sp/>6);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>ASSERT(v9.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>()<sp/>==<sp/>3<sp/>&amp;&amp;<sp/>v9[0]<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>v9[1]<sp/>==<sp/>2<sp/>&amp;&amp;<sp/>v9[2]<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>9<sp/>(Swap)<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;All<sp/>tests<sp/>passed!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/vector/vec_test.hpp"/>
+  </compounddef>
+</doxygen>

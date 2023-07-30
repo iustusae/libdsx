@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>LIBDSX:<sp/>another<sp/>guy<sp/>reinventing<sp/>the<sp/>wheel,<sp/>but<sp/>it&apos;s<sp/>for<sp/>learning<sp/>:D</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#WARNING<sp/>:<sp/>not<sp/>a<sp/>lib<sp/>atm,<sp/>still<sp/>gotta<sp/>figure<sp/>my<sp/>head<sp/>around<sp/>CMake<sp/>etc...<sp/>Just<sp/>execute<sp/>build<sp/>and<sp/>execute!</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

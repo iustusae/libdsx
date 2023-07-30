@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vector_8hpp" xml:lang="en-US">
+<title>src/vector/vector.hpp File Reference</title>
+<indexterm><primary>src/vector/vector.hpp</primary></indexterm>
+<para>
+
+<para>A dynamic array-based vector container implementation. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;v_exceptions.hpp&quot;<?linebreak?>#include &lt;algorithm&gt;<?linebreak?>#include &lt;array&gt;<?linebreak?>#include &lt;cstddef&gt;<?linebreak?>#include &lt;initializer_list&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;memory&gt;<?linebreak?>#include &lt;optional&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;stdexcept&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?></programlisting>Include dependency graph for vector.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="vector_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="vector_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt; T &gt;</link></para>
+
+<para>A dynamic array-based vector container implementation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A dynamic array-based vector container implementation. </para>
+</section>
+</section>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_bf56b0f90a7bd2b859b95942b883d0d7" kind="dir">
+    <compoundname>build/CMakeFiles/3.27.0</compoundname>
+    <innerdir refid="dir_a873ccc445cb9b722acdcabed4a7927e">build/CMakeFiles/3.27.0/CompilerIdC</innerdir>
+    <innerdir refid="dir_7083b6d29432e9627afd78828b1344aa">build/CMakeFiles/3.27.0/CompilerIdCXX</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/3.27.0/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,104 @@
+\hypertarget{vec__test_8hpp_source}{}\doxysection{vec\+\_\+test.\+hpp}
+\label{vec__test_8hpp_source}\index{src/vector/vec\_test.hpp@{src/vector/vec\_test.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vector_8hpp}{vector.hpp}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Helper\ macro\ for\ test\ assertions}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ASSERT(condition)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\ \ \ \ if\ (!(condition))\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ \ \ std::cerr\ <<\ "{}Assertion\ failed\ at\ line\ "{}}\ <<\ \_\_LINE\_\_\ <<\ "{}\ in\ function\ "{}\ \ \(\backslash\)}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \_\_FUNCTION\_\_\ <<\ "{}:\ "{}\ <<\ \#condition\ <<\ std::endl;\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ exit(-\/1);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{00012\ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{00013\ \ \ \}\ while\ (0)}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ vec\_test()\ \{}
+\DoxyCodeLine{00016\ \ \ \textcolor{comment}{//\ Test\ 1:\ Default\ constructor}}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v1;}
+\DoxyCodeLine{00018\ \ \ ASSERT(v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 0);}
+\DoxyCodeLine{00019\ \ \ ASSERT(v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aff5c628bb57b8016939d5ab284204b83}{capacity}}()\ ==\ 5);}
+\DoxyCodeLine{00020\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 1\ (Default\ Constructor)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{comment}{//\ Test\ 2:\ Initializer\_list\ constructor}}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v2\ =\ \{1,\ 2,\ 3\};}
+\DoxyCodeLine{00024\ \ \ ASSERT(v2.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 3);}
+\DoxyCodeLine{00025\ \ \ ASSERT(v2.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aff5c628bb57b8016939d5ab284204b83}{capacity}}()\ ==\ 5);}
+\DoxyCodeLine{00026\ \ \ ASSERT(v2[0]\ ==\ 1);}
+\DoxyCodeLine{00027\ \ \ ASSERT(v2[1]\ ==\ 2);}
+\DoxyCodeLine{00028\ \ \ ASSERT(v2[2]\ ==\ 3);}
+\DoxyCodeLine{00029\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 2\ (Initializer\_list\ Constructor)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//\ Test\ 3:\ Size\ constructor}}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v3(4);}
+\DoxyCodeLine{00033\ \ \ ASSERT(v3.len()\ ==\ 0);}
+\DoxyCodeLine{00034\ \ \ ASSERT(v3.capacity()\ ==\ 4);}
+\DoxyCodeLine{00035\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 3\ (Size\ Constructor)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{comment}{//\ Test\ 4:\ Push\ and\ Pop}}
+\DoxyCodeLine{00038\ \ \ v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a}{push}}(10);}
+\DoxyCodeLine{00039\ \ \ v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a}{push}}(20);}
+\DoxyCodeLine{00040\ \ \ v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a}{push}}(30);}
+\DoxyCodeLine{00041\ \ \ ASSERT(v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 3);}
+\DoxyCodeLine{00042\ \ \ ASSERT(v1[0]\ ==\ 10);}
+\DoxyCodeLine{00043\ \ \ ASSERT(v1[1]\ ==\ 20);}
+\DoxyCodeLine{00044\ \ \ ASSERT(v1[2]\ ==\ 30);}
+\DoxyCodeLine{00045\ \ \ \textcolor{keyword}{auto}\ popped\ =\ v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_a2a8f7c5710eaac9b06a7366e426bc126}{pop}}();}
+\DoxyCodeLine{00046\ \ \ ASSERT(popped.has\_value());}
+\DoxyCodeLine{00047\ \ \ ASSERT(popped.value()\ ==\ 30);}
+\DoxyCodeLine{00048\ \ \ ASSERT(v1.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 2);}
+\DoxyCodeLine{00049\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 4\ (Push\ and\ Pop)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{comment}{//\ Test\ 5:\ Insert\_at}}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v4\ =\ \{1,\ 2,\ 3\};}
+\DoxyCodeLine{00053\ \ \ v4.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_ae003c0c56d315d6e0446192a5e268183}{insert\_at}}(0,\ 0);}
+\DoxyCodeLine{00054\ \ \ v4.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_ae003c0c56d315d6e0446192a5e268183}{insert\_at}}(4,\ 4);}
+\DoxyCodeLine{00055\ \ \ ASSERT(v4.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 5);}
+\DoxyCodeLine{00056\ \ \ ASSERT(v4[0]\ ==\ 0);}
+\DoxyCodeLine{00057\ \ \ ASSERT(v4[1]\ ==\ 1);}
+\DoxyCodeLine{00058\ \ \ ASSERT(v4[2]\ ==\ 2);}
+\DoxyCodeLine{00059\ \ \ ASSERT(v4[3]\ ==\ 3);}
+\DoxyCodeLine{00060\ \ \ ASSERT(v4[4]\ ==\ 4);}
+\DoxyCodeLine{00061\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 5\ (Insert\_at)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{comment}{//\ Test\ 6:\ Erase\_at}}
+\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v5\ =\ \{1,\ 2,\ 3\};}
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{auto}\ erased\ =\ v5.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_abb50d683767ef3c4d88b34b5ad48b3c9}{erase\_at}}(1);}
+\DoxyCodeLine{00066\ \ \ ASSERT(erased.has\_value()\ \&\&\ erased.value()\ ==\ 2);}
+\DoxyCodeLine{00067\ \ \ ASSERT(v5.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 2);}
+\DoxyCodeLine{00068\ \ \ ASSERT(v5[0]\ ==\ 1);}
+\DoxyCodeLine{00069\ \ \ ASSERT(v5[1]\ ==\ 3);}
+\DoxyCodeLine{00070\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 6\ (Erase\_at)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{comment}{//\ Test\ 7:\ Clear}}
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v6\ =\ \{1,\ 2,\ 3\};}
+\DoxyCodeLine{00074\ \ \ v6.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_afc1eb03bf3d9c8389b36456c12cadb66}{clear}}();}
+\DoxyCodeLine{00075\ \ \ ASSERT(v6.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 0);}
+\DoxyCodeLine{00076\ \ \ ASSERT(v6.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aff5c628bb57b8016939d5ab284204b83}{capacity}}()\ ==\ 5);}
+\DoxyCodeLine{00077\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 7\ (Clear)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{comment}{//\ Test\ 8:\ Resize}}
+\DoxyCodeLine{00080\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v7\ =\ \{1,\ 2,\ 3\};}
+\DoxyCodeLine{00081\ \ \ v7.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_ab7612d091ae431bc5e95b707f2db395f}{resize}}(2);}
+\DoxyCodeLine{00082\ \ \ ASSERT(v7.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 2);}
+\DoxyCodeLine{00083\ \ \ ASSERT(v7[0]\ ==\ 1);}
+\DoxyCodeLine{00084\ \ \ ASSERT(v7[1]\ ==\ 2);}
+\DoxyCodeLine{00085\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 8\ (Resize)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{comment}{//\ Test\ 9:\ Swap}}
+\DoxyCodeLine{00088\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v8\ =\ \{1,\ 2,\ 3\};}
+\DoxyCodeLine{00089\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<int>}}\ v9\ =\ \{4,\ 5,\ 6,\ 3\};}
+\DoxyCodeLine{00090\ \ \ v8.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_affadecdd1b5acb01d8cbbb0b16b8c647}{swap}}(v9);}
+\DoxyCodeLine{00091\ \ \ ASSERT(v8.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 4\ \&\&\ v8[0]\ ==\ 4\ \&\&\ v8[1]\ ==\ 5\ \&\&\ v8[2]\ ==\ 6);}
+\DoxyCodeLine{00092\ \ \ ASSERT(v9.\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 3\ \&\&\ v9[0]\ ==\ 1\ \&\&\ v9[1]\ ==\ 2\ \&\&\ v9[2]\ ==\ 3);}
+\DoxyCodeLine{00093\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Test\ 9\ (Swap)\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}All\ tests\ passed!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}

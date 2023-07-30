@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="main_8cxx" kind="file" language="C++">
+    <compoundname>main.cxx</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="vector_8hpp" local="yes">src/vector/vector.hpp</includes>
+    <includes refid="v__exceptions_8hpp" local="yes">vector/v_exceptions.hpp</includes>
+    <includes local="no">gtest/gtest.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>main.cxx</label>
+        <link refid="main_8cxx"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>v_exceptions.hpp</label>
+        <link refid="v__exceptions_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/vector/vector.hpp</label>
+        <link refid="vector_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="9">
+        <label>array</label>
+      </node>
+      <node id="2">
+        <label>cassert</label>
+      </node>
+      <node id="10">
+        <label>cstddef</label>
+      </node>
+      <node id="6">
+        <label>exception</label>
+      </node>
+      <node id="16">
+        <label>gtest/gtest.h</label>
+      </node>
+      <node id="11">
+        <label>initializer_list</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>optional</label>
+      </node>
+      <node id="14">
+        <label>sstream</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_vector_test" prot="public">VectorTest</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cxx_1aad98c84d3fe540fbc8404b6b270ad4d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, DefaultConstructor)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>DefaultConstructor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="20" column="1" bodyfile="main.cxx" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1ad648aaea442ca8a00b2ff8abf304cfc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, InitializerListConstructor)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>InitializerListConstructor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="26" column="1" bodyfile="main.cxx" bodystart="26" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1aa2e5a82df758c6a1f249411c681aca58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, SizeConstructor)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>SizeConstructor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="37" column="1" bodyfile="main.cxx" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1acce86abe436a10d0ea688a5a6f7f09b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, Accessors)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>Accessors</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="44" column="1" bodyfile="main.cxx" bodystart="44" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1ab388d68af36feaeb430e1e32bf9a8053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, Reserve)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>Reserve</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="60" column="1" bodyfile="main.cxx" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1a828aa32f01af3770a894e76f1db7a484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, Shrink)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>Shrink</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="65" column="1" bodyfile="main.cxx" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1a7d0729c191ef4ac16ef4e6625f45868a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, PushAndPop)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>PushAndPop</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="71" column="1" bodyfile="main.cxx" bodystart="71" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1aa58530a31a575338b7f0b63b130bcbfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, InsertAndErase)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>InsertAndErase</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="82" column="1" bodyfile="main.cxx" bodystart="82" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1a4c2b3d57c7c70cc780f554fd9e805bff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, Clear)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>Clear</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="94" column="1" bodyfile="main.cxx" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1a455a25005ac63b9a9b49b363d8979a9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, Resize)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>Resize</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="99" column="1" bodyfile="main.cxx" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1ac1f1f4207035b52e06fd9ae5d52cb6b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, Swap)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>Swap</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="107" column="1" bodyfile="main.cxx" bodystart="107" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1aadfa08cd0fe5034575a19f808502b794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(VectorTest, NegativeIndicies)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_vector_test" kindref="compound">VectorTest</ref></type>
+        </param>
+        <param>
+          <type>NegativeIndicies</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="119" column="1" bodyfile="main.cxx" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cxx_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cxx" line="124" column="5" bodyfile="main.cxx" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vector_test.cpp<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">src/vector/vector.hpp</ref>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vector/v_exceptions.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Test<sp/>fixture<sp/>for<sp/>the<sp/>vector<sp/>class<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_vector_test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_vector_test" kindref="compound">VectorTest</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>::testing::Test<sp/>{<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>emptyVector;<sp/><sp/></highlight><highlight class="comment">//<sp/>Empty<sp/>vector<sp/>for<sp/>testing<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>filledVector;<sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>with<sp/>some<sp/>initial<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetUp()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>filledVector.<ref refid="classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a" kindref="member">push</ref>(10);<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>filledVector.<ref refid="classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a" kindref="member">push</ref>(20);<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>filledVector.<ref refid="classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a" kindref="member">push</ref>(30);<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>DefaultConstructor)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>EXPECT_EQ(emptyVector.len(),<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>EXPECT_EQ(emptyVector.capacity(),<sp/>5);<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>EXPECT_TRUE(emptyVector.is_empty());<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>InitializerListConstructor)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>vectorWithElements<sp/>=<sp/>{1,<sp/>2,<sp/>3};<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>EXPECT_EQ(vectorWithElements.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>(),<sp/>3);<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>EXPECT_EQ(vectorWithElements.<ref refid="classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83" kindref="member">capacity</ref>(),<sp/>5);<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>EXPECT_FALSE(vectorWithElements.<ref refid="classdsx_1_1structs_1_1vector_1a326cc2694be88ca78dfe7b6fd7e559df" kindref="member">is_empty</ref>());<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>EXPECT_EQ(vectorWithElements[0],<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>EXPECT_EQ(vectorWithElements[1],<sp/>2);<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>EXPECT_EQ(vectorWithElements[2],<sp/>3);<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>SizeConstructor)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>sizedVector(10);<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>EXPECT_EQ(sizedVector.len(),<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>EXPECT_EQ(sizedVector.capacity(),<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>EXPECT_TRUE(sizedVector.is_empty());<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>Accessors)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>at()<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.at(0),<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.at(1),<sp/>20);<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.at(2),<sp/>30);<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>operator[]<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[0],<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[1],<sp/>20);<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[2],<sp/>30);<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>front()<sp/>and<sp/>back()<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.front(),<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.back(),<sp/>30);<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>Reserve)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>emptyVector.reserve(10);<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>EXPECT_EQ(emptyVector.capacity(),<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>Shrink)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>filledVector.pop();<sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>last<sp/>element<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>filledVector.shrink();<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.capacity(),<sp/>filledVector.len());<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>PushAndPop)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>emptyVector.push(100);<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>EXPECT_EQ(emptyVector.len(),<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>EXPECT_EQ(emptyVector[0],<sp/>100);<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>poppedElement<sp/>=<sp/>filledVector.pop();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>EXPECT_TRUE(poppedElement.has_value());<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>EXPECT_EQ(poppedElement.value(),<sp/>30);<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.len(),<sp/>2);<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>InsertAndErase)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>filledVector.insert_at(25,<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[1],<sp/>25);<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[2],<sp/>20);<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>erasedElement<sp/>=<sp/>filledVector.erase_at(0);<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>EXPECT_TRUE(erasedElement.has_value());<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>EXPECT_EQ(erasedElement.value(),<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.len(),<sp/>2);<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[0],<sp/>25);<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>Clear)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>filledVector.clear();<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>EXPECT_TRUE(filledVector.is_empty());<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>Resize)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>filledVector.resize(2);<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.len(),<sp/>2);<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>filledVector.resize(5);<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.len(),<sp/>5);<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>Swap)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;int&gt;</ref><sp/>tempVector<sp/>=<sp/>{100,<sp/>200};<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>filledVector.<ref refid="classdsx_1_1structs_1_1vector_1affadecdd1b5acb01d8cbbb0b16b8c647" kindref="member">swap</ref>(tempVector);<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector.len(),<sp/>2);<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>EXPECT_EQ(tempVector.<ref refid="classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753" kindref="member">len</ref>(),<sp/>3);<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>EXPECT_EQ(filledVector[0],<sp/>100);<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>EXPECT_EQ(tempVector[0],<sp/>10);<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">TEST_F(<ref refid="class_vector_test" kindref="compound">VectorTest</ref>,<sp/>NegativeIndicies)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="classdsx_1_1structs_1_1vector" kindref="compound">dsx::structs::vector&lt;std::string&gt;</ref><sp/>vec<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;ayman&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ahmed&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;tarik&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>EXPECT_THROW(vec[-1],<sp/><ref refid="classdsx_1_1structs_1_1exceptions_1_1_negative_index_execption" kindref="compound">dsx::structs::exceptions::NegativeIndexExecption</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>::testing::InitGoogleTest(&amp;argc,<sp/>argv);<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&quot;vector/vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/>int<sp/>main()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>dsx::structs::vector&lt;int&gt;<sp/>vec<sp/>=<sp/>{1,<sp/>2,<sp/>4};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>vec.at(-2).value_or(-1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>return<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="main.cxx"/>
+  </compounddef>
+</doxygen>

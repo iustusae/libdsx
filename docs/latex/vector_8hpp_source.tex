@@ -1,0 +1,248 @@
+\hypertarget{vector_8hpp_source}{}\doxysection{vector.\+hpp}
+\label{vector_8hpp_source}\index{src/vector/vector.hpp@{src/vector/vector.hpp}}
+\mbox{\hyperlink{vector_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}v\_exceptions.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }dsx::structs\ \{}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdsx_1_1structs_1_1vector}{vector}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{int}\ \_cap\ =\ 5;}
+\DoxyCodeLine{00035\ \ \ T\ *\_arr\ =\ \textcolor{keyword}{new}\ T[\_cap];}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{int}\ \_len\ =\ \{0\};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a79c7e69ade689139df0f23429f998bb6}{vector}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a80ada2169d2230c3cee8ad248cf222da}{vector}}(std::initializer\_list<T>\ list)\ :\ \_len(list.size())\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \_arr\ =\ \textcolor{keyword}{new}\ T[\_cap];\ \textcolor{comment}{//\ Allocate\ memory\ for\ the\ array}}
+\DoxyCodeLine{00059\ \ \ \ \ std::copy(list.begin(),\ list.end(),}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_arr);\ \textcolor{comment}{//\ Copy\ elements\ from\ the\ initializer\ list\ to\ the\ array}}
+\DoxyCodeLine{00061\ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_ace40aeceb3c34ad364185ebe830095be}{vector}}(\textcolor{keywordtype}{int}\ p\_size)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ T\ *n\_arr\ =}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ T[p\_size];\ \textcolor{comment}{//\ Allocate\ memory\ for\ the\ new\ array\ with\ the\ given\ size}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{delete}[]\ \_arr;\ \textcolor{comment}{//\ Deallocate\ memory\ from\ the\ previous\ array}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \_arr\ =\ n\_arr;\ \textcolor{comment}{//\ Update\ the\ pointer\ to\ the\ newly\ allocated\ array}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_arr)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ ss.str());\ \textcolor{comment}{//\ Throw\ an\ error\ if\ memory\ allocation\ fails}}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \_cap\ =\ p\_size;\ \textcolor{comment}{//\ Update\ the\ capacity\ of\ the\ vector}}
+\DoxyCodeLine{00090\ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_ae213f4a043537c6cd57e33407eea6608}{\string~vector}}()\ \{\ \textcolor{keyword}{delete}[]\ \_arr;\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_len;\ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00119\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_aff5c628bb57b8016939d5ab284204b83}{capacity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_cap;\ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00129\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a326cc2694be88ca78dfe7b6fd7e559df}{is\_empty}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753}{len}}()\ ==\ 0;\ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00142\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a0d6e589875e22d2e17d2ea1deba69abd}{reserve}}(\textcolor{keywordtype}{int}\ n\_size);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a0cea90f4ec517324152a2194746e224c}{shrink}}();}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00167\ \ \ T\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a92a0c981cb9bf49c26d6aef837c58776}{at}}(\textcolor{keywordtype}{int}\ p\_idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00181\ \ \ T\ \&\mbox{\hyperlink{classdsx_1_1structs_1_1vector_aefa7260fda881cb0f1f1803b87d1fe75}{operator[]}}(\textcolor{keywordtype}{int}\ p\_idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00193\ \ \ \textcolor{keyword}{const}\ T\ \&\mbox{\hyperlink{classdsx_1_1structs_1_1vector_ae6aa9f8cd4f18b5ddce9609f7ceb0f5f}{front}}()\ const\ noexcept;}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00205\ \ \ const\ T\ \&\mbox{\hyperlink{classdsx_1_1structs_1_1vector_ac18424a77e9be27b93ab11e7531ebe53}{back}}()\ const\ noexcept;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00217\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a}{push}}(const\ T\ \&elt);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00229\ \ \ std::optional<T>\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a2a8f7c5710eaac9b06a7366e426bc126}{pop}}();}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00244\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_ae003c0c56d315d6e0446192a5e268183}{insert\_at}}(const\ T\ \&elt,\ \textcolor{keywordtype}{int}\ idx);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00257\ \ \ std::optional<T>\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_abb50d683767ef3c4d88b34b5ad48b3c9}{erase\_at}}(\textcolor{keywordtype}{int}\ idx);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00269\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_afc1eb03bf3d9c8389b36456c12cadb66}{clear}}();}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00283\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_ab7612d091ae431bc5e95b707f2db395f}{resize}}(\textcolor{keywordtype}{int}\ n\_size);}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00295\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_affadecdd1b5acb01d8cbbb0b16b8c647}{swap}}(\mbox{\hyperlink{classdsx_1_1structs_1_1vector}{vector}}<T>\ \&o\_vec);}
+\DoxyCodeLine{00296\ \};}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \}\ \textcolor{comment}{//\ namespace\ dsx::structs}}
+\DoxyCodeLine{00299\ template\ <typename\ T>}
+\DoxyCodeLine{00300\ \textcolor{keywordtype}{void}\ dsx::structs::\mbox{\hyperlink{classdsx_1_1structs_1_1vector}{vector}}<T>::\mbox{\hyperlink{classdsx_1_1structs_1_1vector_a0d6e589875e22d2e17d2ea1deba69abd}{reserve}}(\textcolor{keywordtype}{int}\ n\_size)\ noexcept(false)\ \{}
+\DoxyCodeLine{00301\ \ \ \textcolor{keywordflow}{if}\ (n\_size\ <=\ \_cap)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00303\ \ \ \}}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ T\ *new\_arr\ =\ \textcolor{keyword}{new}\ T[n\_size];}
+\DoxyCodeLine{00306\ \ \ \textcolor{keywordflow}{if}\ (!new\_arr)\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keyword}{delete}[]\ new\_arr;}
+\DoxyCodeLine{00308\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00309\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(ss.str());}
+\DoxyCodeLine{00312\ \ \ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ std::copy(\_arr,\ \_arr\ +\ \_len,\ new\_arr);}
+\DoxyCodeLine{00315\ \ \ \textcolor{keyword}{delete}[]\ \_arr;}
+\DoxyCodeLine{00316\ \ \ \_arr\ =\ new\_arr;}
+\DoxyCodeLine{00317\ \ \ \_cap\ =\ n\_size;}
+\DoxyCodeLine{00318\ \}}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a0cea90f4ec517324152a2194746e224c}{dsx::structs::vector<T>::shrink}}()\ noexcept(false)\ \{}
+\DoxyCodeLine{00321\ \ \ \textcolor{keywordflow}{if}\ (\_len\ ==\ 0)\ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00323\ \ \ \}}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ T\ *new\_arr\ =\ \textcolor{keyword}{new}\ T[\_len];}
+\DoxyCodeLine{00326\ \ \ \textcolor{keywordflow}{if}\ (!new\_arr)\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keyword}{delete}[]\ new\_arr;}
+\DoxyCodeLine{00328\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00329\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(ss.str());}
+\DoxyCodeLine{00332\ \ \ \}}
+\DoxyCodeLine{00333\ \ \ std::copy(\_arr,\ \_arr\ +\ \_len,\ new\_arr);}
+\DoxyCodeLine{00334\ \ \ \textcolor{keyword}{delete}[]\ \_arr;}
+\DoxyCodeLine{00335\ \ \ \_arr\ =\ new\_arr;}
+\DoxyCodeLine{00336\ \ \ \textcolor{keywordflow}{if}\ (!\_arr)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keyword}{delete}[]\ new\_arr;}
+\DoxyCodeLine{00338\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00339\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(ss.str());}
+\DoxyCodeLine{00342\ \ \ \}}
+\DoxyCodeLine{00343\ \ \ \_cap\ =\ \_len;}
+\DoxyCodeLine{00344\ \}}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a}{dsx::structs::vector<T>::push}}(\textcolor{keyword}{const}\ T\ \&elt)\ \{}
+\DoxyCodeLine{00347\ \ \ \textcolor{keywordflow}{if}\ (\_len\ +\ 1\ >=\ \_cap)\ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a0d6e589875e22d2e17d2ea1deba69abd}{reserve}}(\_cap\ *\ 2\ *\ \textcolor{keyword}{sizeof}(*\_arr));}
+\DoxyCodeLine{00349\ \ \ \ \ \_cap\ *=\ 2;}
+\DoxyCodeLine{00350\ \ \ \}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \_arr[\_len]\ =\ elt;}
+\DoxyCodeLine{00353\ \ \ \_len++;}
+\DoxyCodeLine{00354\ \}}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ std::optional<T>\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a2a8f7c5710eaac9b06a7366e426bc126}{dsx::structs::vector<T>::pop}}()\ \{}
+\DoxyCodeLine{00357\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classdsx_1_1structs_1_1vector_a326cc2694be88ca78dfe7b6fd7e559df}{is\_empty}}())\ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{return}\ std::nullopt;}
+\DoxyCodeLine{00359\ \ \ \}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \textcolor{keyword}{auto}\ popped\ =\ \_arr[\_len\ -\/\ 1];}
+\DoxyCodeLine{00362\ \ \ \_arr[\_len\ -\/\ 1]\ =\ \{\};}
+\DoxyCodeLine{00363\ \ \ -\/-\/\_len;}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \textcolor{keywordflow}{return}\ popped;}
+\DoxyCodeLine{00366\ \}}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00369\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_ae003c0c56d315d6e0446192a5e268183}{dsx::structs::vector<T>::insert\_at}}(\textcolor{keyword}{const}\ T\ \&elt,\ \textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{noexcept}(\textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00370\ \ \ \textcolor{keywordflow}{if}\ (idx\ >=\ \_len)\ \{}
+\DoxyCodeLine{00371\ \ \ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a}{push}}(elt);}
+\DoxyCodeLine{00372\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_len\ ==\ \_cap)\ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \_cap\ =\ (\_cap\ ==\ 0)\ ?\ 5\ :\ \_cap\ *\ 2;}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ T\ *new\_arr\ =\ \textcolor{keyword}{new}\ T[\_cap];}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \ \ \ \ std::copy(\_arr,\ \_arr\ +\ idx,\ new\_arr);}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ new\_arr[idx]\ =\ elt;}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ std::copy(\_arr\ +\ idx,\ \_arr\ +\ \_len,\ new\_arr\ +\ idx\ +\ 1);}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \_arr;}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \_arr\ =\ new\_arr;}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_arr)\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(ss.str());}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \_len++;}
+\DoxyCodeLine{00392\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ \_len;\ i\ >\ idx;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \_arr[i]\ =\ \_arr[i\ -\/\ 1];}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \_arr[idx]\ =\ elt;}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \_len++;}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \ \ \}}
+\DoxyCodeLine{00401\ \}}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00404\ std::optional<T>\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_abb50d683767ef3c4d88b34b5ad48b3c9}{dsx::structs::vector<T>::erase\_at}}(\textcolor{keywordtype}{int}\ idx)\ \{}
+\DoxyCodeLine{00405\ \ \ \textcolor{keywordflow}{if}\ (idx\ >=\ \_len)\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordflow}{return}\ std::nullopt;}
+\DoxyCodeLine{00407\ \ \ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ T\ erased\_value\ =\ \_arr[idx];}
+\DoxyCodeLine{00410\ \ \ std::copy(\_arr\ +\ idx\ +\ 1,\ \_arr\ +\ \_len,\ \_arr\ +\ idx);}
+\DoxyCodeLine{00411\ \ \ \_len-\/-\/;}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \textcolor{keywordflow}{return}\ erased\_value;}
+\DoxyCodeLine{00414\ \}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_afc1eb03bf3d9c8389b36456c12cadb66}{dsx::structs::vector<T>::clear}}()\ noexcept(false)\ \{}
+\DoxyCodeLine{00417\ \ \ T\ *n\_arr\ =\ \textcolor{keyword}{new}\ T[\_cap];}
+\DoxyCodeLine{00418\ \ \ \textcolor{keyword}{delete}[]\ \_arr;}
+\DoxyCodeLine{00419\ \ \ \_arr\ =\ n\_arr;}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ \ \ \textcolor{keywordflow}{if}\ (!\_arr)\ \{}
+\DoxyCodeLine{00422\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00423\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00425\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(ss.str());}
+\DoxyCodeLine{00426\ \ \ \}}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00428\ \ \ this-\/>\_cap\ =\ \_cap;}
+\DoxyCodeLine{00429\ \ \ this-\/>\_len\ =\ 0;}
+\DoxyCodeLine{00430\ \}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_ab7612d091ae431bc5e95b707f2db395f}{dsx::structs::vector<T>::resize}}(\textcolor{keywordtype}{int}\ n\_size)\ \{}
+\DoxyCodeLine{00433\ \ \ \textcolor{keywordflow}{if}\ (n\_size\ <\ \_len)\ \{}
+\DoxyCodeLine{00434\ \ \ \ \ \_len\ =\ n\_size;}
+\DoxyCodeLine{00435\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (n\_size\ >\ \_len\ \&\&\ n\_size\ >\ \_cap)\ \{}
+\DoxyCodeLine{00436\ \ \ \ \ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_a0d6e589875e22d2e17d2ea1deba69abd}{reserve}}(n\_size);}
+\DoxyCodeLine{00437\ \ \ \}}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \textcolor{keywordflow}{if}\ (!\_arr)\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00441\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Memory\ reallocation\ failed\ at\ line:\ "{}}\ <<\ \_\_LINE\_\_}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ in\ function:\ "{}}\ <<\ \_\_FUNCTION\_\_;}
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(ss.str());}
+\DoxyCodeLine{00444\ \ \ \}}
+\DoxyCodeLine{00445\ \}}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00448\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdsx_1_1structs_1_1vector_affadecdd1b5acb01d8cbbb0b16b8c647}{dsx::structs::vector<T>::swap}}(\mbox{\hyperlink{classdsx_1_1structs_1_1vector}{dsx::structs::vector<T>}}\ \&o\_vec)\ \{}
+\DoxyCodeLine{00449\ \ \ std::swap(this-\/>\_len,\ o\_vec.\_len);}
+\DoxyCodeLine{00450\ \ \ std::swap(this-\/>\_arr,\ o\_vec.\_arr);}
+\DoxyCodeLine{00451\ \ \ std::swap(this-\/>\_cap,\ o\_vec.\_cap);}
+\DoxyCodeLine{00452\ \}}
+
+\end{DoxyCode}

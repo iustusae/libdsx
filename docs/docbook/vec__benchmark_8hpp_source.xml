@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vec__benchmark_8hpp_source" xml:lang="en-US">
+<title>vec_benchmark.hpp</title>
+<indexterm><primary>src/vector/vec_benchmark.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_vector_8hpp">vector.hpp</link>&quot;</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;chrono&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+6 
+7 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+8 <emphasis role="keywordtype">double</emphasis>&#32;benchmarkCustomVectorPushBack(<emphasis role="keywordtype">long</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;iterations)&#32;{
+9 &#32;&#32;<link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector&lt;T&gt;</link>&#32;custom_vector(iterations);
+10 
+11 &#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;start&#32;=&#32;std::chrono::high_resolution_clock::now();
+12 &#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;iterations;&#32;++i)&#32;{
+13 &#32;&#32;&#32;&#32;custom_vector.push(i);
+14 &#32;&#32;}
+15 &#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;end&#32;=&#32;std::chrono::high_resolution_clock::now();
+16 
+17 &#32;&#32;std::chrono::duration&lt;double&gt;&#32;duration&#32;=&#32;end&#32;-&#32;start;
+18 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;duration.count()&#32;*&#32;1000.0;
+19 }
+20 
+21 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis role="keywordtype">double</emphasis>&#32;benchmarkStdVectorPushBack(<emphasis role="keywordtype">long</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;iterations)&#32;{
+22 &#32;&#32;std::vector&lt;T&gt;&#32;std_vector;
+23 &#32;&#32;std_vector.reserve(iterations);
+24 &#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;start&#32;=&#32;std::chrono::high_resolution_clock::now();
+25 &#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;iterations;&#32;++i)&#32;{
+26 &#32;&#32;&#32;&#32;std_vector.push_back(i);
+27 &#32;&#32;}
+28 &#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;end&#32;=&#32;std::chrono::high_resolution_clock::now();
+29 
+30 &#32;&#32;std::chrono::duration&lt;double&gt;&#32;duration&#32;=&#32;end&#32;-&#32;start;
+31 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;duration.count()&#32;*&#32;1000.0;
+32 }
+33 
+34 <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;vec_bench()&#32;{
+35 &#32;&#32;std::vector&lt;long&#32;long&gt;&#32;iters;
+36 &#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;=&#32;6;&#32;i++)&#32;{
+37 &#32;&#32;&#32;&#32;iters.push_back(pow(10,&#32;i));
+38 &#32;&#32;}
+39 
+40 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Benchmarking&#32;push_back():\n&quot;</emphasis>;
+41 &#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;------------------------\n&quot;</emphasis>;
+42 
+43 &#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">long</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;iteration&#32;:&#32;iters)&#32;{
+44 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iterations:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;iteration&#32;&lt;&lt;&#32;std::endl;
+45 
+46 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Benchmarking&#32;int</emphasis>
+47 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;custom_int_time&#32;=&#32;benchmarkCustomVectorPushBack&lt;int&gt;(iteration);
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;std_int_time&#32;=&#32;benchmarkStdVectorPushBack&lt;int&gt;(iteration);
+49 
+50 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Custom&#32;vector&#32;(int)&#32;time:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;custom_int_time&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;ms\n&quot;</emphasis>;
+51 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Std&#32;vector&#32;(int)&#32;time:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;std_int_time&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;ms\n&quot;</emphasis>;
+52 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Winner:&#32;&quot;</emphasis>
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;((custom_int_time&#32;&lt;&#32;std_int_time)&#32;?&#32;<emphasis role="stringliteral">&quot;Custom&#32;Vector&quot;</emphasis>
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<emphasis role="stringliteral">&quot;Std&#32;Vector&quot;</emphasis>)
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+56 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Faster&#32;by:&#32;&quot;</emphasis>
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;((custom_int_time&#32;&lt;&#32;std_int_time)
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;(std_int_time&#32;-&#32;custom_int_time)
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;(custom_int_time&#32;-&#32;std_int_time))
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;ms\n&quot;</emphasis>;
+61 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;---------------------------------\n&quot;</emphasis>;
+62 &#32;&#32;}
+63 
+64 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+65 }
+</programlisting></section>

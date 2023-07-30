@@ -1,0 +1,861 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classdsx_1_1structs_1_1vector" xml:lang="en-US">
+<title>dsx::structs::vector&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>A dynamic array-based vector container implementation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;vector.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdsx_1_1structs_1_1vector_1a79c7e69ade689139df0f23429f998bb6">vector</link> ()=default</para>
+
+<para>Default constructor for the vector class. </para>
+</listitem>
+            <listitem><para><link linkend="_classdsx_1_1structs_1_1vector_1a80ada2169d2230c3cee8ad248cf222da">vector</link> (std::initializer_list&lt; T &gt; list)</para>
+
+<para>Constructor that initializes the vector with elements from an initializer list. </para>
+</listitem>
+            <listitem><para><link linkend="_classdsx_1_1structs_1_1vector_1ace40aeceb3c34ad364185ebe830095be">vector</link> (int p_size)</para>
+
+<para>Constructor that sets the initial size of the vector. </para>
+</listitem>
+            <listitem><para><link linkend="_classdsx_1_1structs_1_1vector_1ae213f4a043537c6cd57e33407eea6608">~vector</link> ()</para>
+
+<para>Destructor for the vector class. </para>
+</listitem>
+            <listitem><para>int <link linkend="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753">len</link> () const</para>
+
+<para>Get the current number of elements in the vector. </para>
+</listitem>
+            <listitem><para>int <link linkend="_classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83">capacity</link> () const</para>
+
+<para>Get the current capacity of the vector. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classdsx_1_1structs_1_1vector_1a326cc2694be88ca78dfe7b6fd7e559df">is_empty</link> () const</para>
+
+<para>Check if the vector is empty. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1a0d6e589875e22d2e17d2ea1deba69abd">reserve</link> (int n_size)</para>
+
+<para>Reserves memory for a given number of elements in the vector. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1a0cea90f4ec517324152a2194746e224c">shrink</link> ()</para>
+
+<para>Reduces the vector&apos;s capacity to fit its size. </para>
+</listitem>
+            <listitem><para>T <link linkend="_classdsx_1_1structs_1_1vector_1a92a0c981cb9bf49c26d6aef837c58776">at</link> (int p_idx) const</para>
+
+<para>Returns the element at the specified index. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_classdsx_1_1structs_1_1vector_1aefa7260fda881cb0f1f1803b87d1fe75">operator[]</link> (int p_idx) const</para>
+
+<para>Returns a reference to the element at the specified index. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_classdsx_1_1structs_1_1vector_1ae6aa9f8cd4f18b5ddce9609f7ceb0f5f">front</link> () const noexcept</para>
+
+<para>Returns a reference to the first element in the vector. </para>
+</listitem>
+            <listitem><para>const T &amp; <link linkend="_classdsx_1_1structs_1_1vector_1ac18424a77e9be27b93ab11e7531ebe53">back</link> () const noexcept</para>
+
+<para>Returns a reference to the last element in the vector. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a">push</link> (const T &amp;elt)</para>
+
+<para>Adds an element to the end of the vector. </para>
+</listitem>
+            <listitem><para>std::optional&lt; T &gt; <link linkend="_classdsx_1_1structs_1_1vector_1a2a8f7c5710eaac9b06a7366e426bc126">pop</link> ()</para>
+
+<para>Removes and returns the last element of the vector. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1ae003c0c56d315d6e0446192a5e268183">insert_at</link> (const T &amp;elt, int idx)</para>
+
+<para>Inserts an element at the specified index. </para>
+</listitem>
+            <listitem><para>std::optional&lt; T &gt; <link linkend="_classdsx_1_1structs_1_1vector_1abb50d683767ef3c4d88b34b5ad48b3c9">erase_at</link> (int idx)</para>
+
+<para>Removes and returns the element at the specified index. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1afc1eb03bf3d9c8389b36456c12cadb66">clear</link> ()</para>
+
+<para>Removes all elements from the vector. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1ab7612d091ae431bc5e95b707f2db395f">resize</link> (int n_size)</para>
+
+<para>Resizes the vector to the specified size. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classdsx_1_1structs_1_1vector_1affadecdd1b5acb01d8cbbb0b16b8c647">swap</link> (<link linkend="_classdsx_1_1structs_1_1vector">vector</link>&lt; T &gt; &amp;o_vec)</para>
+
+<para>Swaps the contents of two vectors. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class dsx::structs::vector&lt; T &gt;</title></simplesect>
+
+<para>A dynamic array-based vector container implementation. </para>
+
+
+
+<para>The vector class provides a dynamic array-based container for holding elements of a specified type. It automatically resizes its underlying array to accommodate the elements as they are added or removed.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of elements held in the vector. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>cap</entry><entry>
+<para>The initial capacity of the vector. Defaults to 5. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a79c7e69ade689139df0f23429f998bb6"/><section>
+    <title>vector()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>vector</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>vector</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::vector ( )<computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor for the vector class. </para>
+</para>
+
+<para>This constructor creates an empty vector with the default initial capacity. </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a80ada2169d2230c3cee8ad248cf222da"/><section>
+    <title>vector()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>vector</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>vector</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::vector (std::initializer_list&lt; T &gt; list)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor that initializes the vector with elements from an initializer list. </para>
+</para>
+
+<para>This constructor creates a vector with the elements provided in the given initializer list. It sets the length of the vector to the number of elements in the initializer list.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>list</entry><entry>
+<para>An initializer list containing elements to be stored in the vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1ace40aeceb3c34ad364185ebe830095be"/><section>
+    <title>vector()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>vector</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>vector</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::vector (int p_size)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructor that sets the initial size of the vector. </para>
+</para>
+
+<para>This constructor creates a vector with the specified initial size. It allocates memory for the underlying array with the given size and sets the capacity accordingly.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p_size</entry><entry>
+<para>The initial size of the vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::runtime_error</entry><entry>
+<para>If memory allocation fails. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1ae213f4a043537c6cd57e33407eea6608"/><section>
+    <title>~vector()</title>
+<indexterm><primary>~vector</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>~vector</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::~<link linkend="_classdsx_1_1structs_1_1vector">vector</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for the vector class. </para>
+</para>
+
+<para>This destructor automatically deallocates the memory used by the underlying array when the vector goes out of scope. It ensures that there are no memory leaks and releases the resources held by the vector. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a92a0c981cb9bf49c26d6aef837c58776"/><section>
+    <title>at()</title>
+<indexterm><primary>at</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>at</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::at (int p_idx) const</computeroutput></para><para>
+
+<para>Returns the element at the specified index. </para>
+</para>
+
+<para>This function provides access to the element at the specified index in the vector. It performs boundary checks to ensure that the index is within the valid range of the vector. If the index is out of range, the function throws an std::out_of_range exception.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p_idx</entry><entry>
+<para>The index of the element to access. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The element at the specified index. </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::out_of_range</entry><entry>
+<para>If the index is out of range. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1ac18424a77e9be27b93ab11e7531ebe53"/><section>
+    <title>back()</title>
+<indexterm><primary>back</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>back</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::back ( ) const<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Returns a reference to the last element in the vector. </para>
+</para>
+
+<para>This function provides access to the last element in the vector. It is used to retrieve the last element when the vector is not empty. It does not check if the vector is empty; calling this function on an empty vector results in undefined behavior.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A reference to the last element in the vector. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1aff5c628bb57b8016939d5ab284204b83"/><section>
+    <title>capacity()</title>
+<indexterm><primary>capacity</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>capacity</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>int <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::capacity ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the current capacity of the vector. </para>
+</para>
+
+<para>This function returns the current capacity of the vector, which represents the maximum number of elements that can be stored without reallocation.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current capacity of the vector. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1afc1eb03bf3d9c8389b36456c12cadb66"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>clear</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::clear</computeroutput></para><para>
+
+<para>Removes all elements from the vector. </para>
+</para>
+
+<para>This function removes all elements from the vector, leaving it empty. It deallocates the memory used by the underlying array and resets the length and capacity to zero.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::runtime_error</entry><entry>
+<para>If memory reallocation fails while clearing the vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1abb50d683767ef3c4d88b34b5ad48b3c9"/><section>
+    <title>erase_at()</title>
+<indexterm><primary>erase_at</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>erase_at</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::optional&lt; T &gt; <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::erase_at (int idx)</computeroutput></para><para>
+
+<para>Removes and returns the element at the specified index. </para>
+</para>
+
+<para>This function removes the element at the specified index in the vector and returns it as an optional value. If the index is out of range, the function returns an empty optional (std::nullopt).</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>The index of the element to be removed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An optional containing the removed element if the index is valid, or an empty optional if the index is out of range. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1ae6aa9f8cd4f18b5ddce9609f7ceb0f5f"/><section>
+    <title>front()</title>
+<indexterm><primary>front</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>front</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>const T &amp; <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::front ( ) const<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Returns a reference to the first element in the vector. </para>
+</para>
+
+<para>This function provides access to the first element in the vector. It is used to retrieve the first element when the vector is not empty. It does not check if the vector is empty; calling this function on an empty vector results in undefined behavior.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A reference to the first element in the vector. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1ae003c0c56d315d6e0446192a5e268183"/><section>
+    <title>insert_at()</title>
+<indexterm><primary>insert_at</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>insert_at</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::insert_at (const T &amp; elt, int idx)</computeroutput></para><para>
+
+<para>Inserts an element at the specified index. </para>
+</para>
+
+<para>This function inserts a new element at the specified index in the vector. If the index is greater than or equal to the current length of the vector, the function behaves like <computeroutput>push</computeroutput> and adds the element to the end of the vector. If the vector&apos;s size is about to exceed its current capacity, the function doubles the capacity and reallocates memory for the underlying array to accommodate the new element efficiently.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>elt</entry><entry>
+<para>The element to be inserted into the vector. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>idx</entry><entry>
+<para>The index at which the element should be inserted. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_ae003c0c56d315d6e0446192a5e268183_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a326cc2694be88ca78dfe7b6fd7e559df"/><section>
+    <title>is_empty()</title>
+<indexterm><primary>is_empty</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>is_empty</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::is_empty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Check if the vector is empty. </para>
+</para>
+
+<para>This function checks whether the vector is empty, i.e., if it contains no elements.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the vector is empty, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_a326cc2694be88ca78dfe7b6fd7e559df_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_a326cc2694be88ca78dfe7b6fd7e559df_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1aea26229420a6bbf1cbd2a77a22290753"/><section>
+    <title>len()</title>
+<indexterm><primary>len</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>len</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>int <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::len ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the current number of elements in the vector. </para>
+</para>
+
+<para>This function returns the current number of elements present in the vector.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of elements in the vector. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_aea26229420a6bbf1cbd2a77a22290753_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1aefa7260fda881cb0f1f1803b87d1fe75"/><section>
+    <title>operator[]()</title>
+<indexterm><primary>operator[]</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::operator[] (int p_idx) const</computeroutput></para><para>
+
+<para>Returns a reference to the element at the specified index. </para>
+</para>
+
+<para>This operator provides direct access to the element at the specified index in the vector. It performs boundary checks to ensure that the index is within the valid range of the vector. If the index is out of range, the operator throws an std::out_of_range exception.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>The index of the element to access. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A reference to the element at the specified index. </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::out_of_range</entry><entry>
+<para>If the index is out of range. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a2a8f7c5710eaac9b06a7366e426bc126"/><section>
+    <title>pop()</title>
+<indexterm><primary>pop</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>pop</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::optional&lt; T &gt; <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::pop</computeroutput></para><para>
+
+<para>Removes and returns the last element of the vector. </para>
+</para>
+
+<para>This function removes the last element of the vector and returns it as an optional value. If the vector is empty, the function returns an empty optional (std::nullopt).</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>An optional containing the last element of the vector if the vector is not empty, or an empty optional if the vector is empty. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_a2a8f7c5710eaac9b06a7366e426bc126_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a5e086b46fe16e1d3cddfeb57394a2b4a"/><section>
+    <title>push()</title>
+<indexterm><primary>push</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>push</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::push (const T &amp; elt)</computeroutput></para><para>
+
+<para>Adds an element to the end of the vector. </para>
+</para>
+
+<para>This function adds a new element to the end of the vector. If the vector&apos;s size is about to exceed its current capacity, the function doubles the capacity and reallocates memory for the underlying array to accommodate the new element efficiently.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>elt</entry><entry>
+<para>The element to be added to the end of the vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_a5e086b46fe16e1d3cddfeb57394a2b4a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a0d6e589875e22d2e17d2ea1deba69abd"/><section>
+    <title>reserve()</title>
+<indexterm><primary>reserve</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>reserve</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::reserve (int n_size)</computeroutput></para><para>
+
+<para>Reserves memory for a given number of elements in the vector. </para>
+</para>
+
+<para>If the requested size is less than or equal to the current capacity, the function does nothing. Otherwise, it allocates memory for the specified number of elements and copies the existing elements to the newly allocated memory. The function updates the capacity of the vector accordingly.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n_size</entry><entry>
+<para>The number of elements to reserve memory for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::runtime_error</entry><entry>
+<para>If memory allocation fails. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_a0d6e589875e22d2e17d2ea1deba69abd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1ab7612d091ae431bc5e95b707f2db395f"/><section>
+    <title>resize()</title>
+<indexterm><primary>resize</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>resize</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::resize (int n_size)</computeroutput></para><para>
+
+<para>Resizes the vector to the specified size. </para>
+</para>
+
+<para>This function resizes the vector to the specified size. If the new size is smaller than the current length, elements at the end of the vector are removed. If the new size is larger than the current length, the vector&apos;s capacity is adjusted to accommodate the new size efficiently.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n_size</entry><entry>
+<para>The new size of the vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::runtime_error</entry><entry>
+<para>If memory reallocation fails while resizing the vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdsx_1_1structs_1_1vector_ab7612d091ae431bc5e95b707f2db395f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1a0cea90f4ec517324152a2194746e224c"/><section>
+    <title>shrink()</title>
+<indexterm><primary>shrink</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>shrink</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::shrink</computeroutput></para><para>
+
+<para>Reduces the vector&apos;s capacity to fit its size. </para>
+</para>
+
+<para>This function deallocates the unused memory from the underlying array, reducing the vector&apos;s capacity to be equal to the number of elements it contains. If the vector is empty, the function does nothing.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::runtime_error</entry><entry>
+<para>If memory reallocation fails while shrinking. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classdsx_1_1structs_1_1vector_1affadecdd1b5acb01d8cbbb0b16b8c647"/><section>
+    <title>swap()</title>
+<indexterm><primary>swap</primary><secondary>dsx::structs::vector&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>dsx::structs::vector&lt; T &gt;</primary><secondary>swap</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_classdsx_1_1structs_1_1vector">dsx::structs::vector</link>&lt; T &gt;::swap (<link linkend="_classdsx_1_1structs_1_1vector">vector</link>&lt; T &gt; &amp; o_vec)</computeroutput></para><para>
+
+<para>Swaps the contents of two vectors. </para>
+</para>
+
+<para>This function swaps the contents of the current vector with the contents of another vector. It exchanges the lengths, capacities, and underlying arrays of the two vectors.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>o_vec</entry><entry>
+<para>The reference to the vector to be swapped with the current vector. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/vector/<link linkend="_vector_8hpp">vector.hpp</link></section>
+</section>

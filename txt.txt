@@ -1,0 +1,1 @@
+Removed `cap` as a template parameter.
