@@ -2,7 +2,6 @@
 #ifndef LIBDSX_VEC_EXCEPTIONS
 #define LIBDSX_VEC_EXCEPTIONS
 #include <exception>
-#include <string>
 
 namespace dsx::structs::exceptions {
 class NegativeIndexExecption : public std::exception {

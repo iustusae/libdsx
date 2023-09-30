@@ -1,5 +1,8 @@
 build/
+docs/*
+.ccls-cache/
 .git/
 .cache/
 .idea/
 cmake-build-debug/
+.vscode/

@@ -6,10 +6,10 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add the include directory to the search path
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src ${CMAKE_CURRENT_SOURCE_DIR}/src/linked_list )
 
 # Add the main executable target
-add_executable(main main.cxx src/vector/vector.hpp src/vector/vec_test.hpp src/vector/vec_benchmark.hpp src/linked_list/linked_list.h src/vector/v_exceptions.hpp)
+add_executable(main main.cxx src/vector/vector.hpp src/vector/vec_test.hpp src/vector/vec_benchmark.hpp src/linked_list/linked_list.hpp src/vector/v_exceptions.hpp)
 target_compile_options(main PRIVATE -std=c++20 -Wall -Werror)
 enable_testing()
 

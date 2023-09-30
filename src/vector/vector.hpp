@@ -1,16 +1,13 @@
-#pragma once
+
 #include "v_exceptions.hpp"
 #include <algorithm>
-#include <array>
-#include <cstddef>
 #include <initializer_list>
 #include <iostream>
-#include <memory>
 #include <optional>
 #include <sstream>
 #include <stdexcept>
 #include <string>
-
+#pragma once
 /**
  * @brief A dynamic array-based vector container implementation.
  *
